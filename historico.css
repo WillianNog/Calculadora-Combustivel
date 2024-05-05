@@ -2,98 +2,144 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+  }
+  
+  body {
     min-height: 100vh;
     height: auto;
-    background: linear-gradient(to bottom, #01080E 10%, #FFF 10%, #FFF 90%, #01080E 90%);
-    padding: 7vh 8vw 5vh;
+    background: linear-gradient(to bottom, #00265f 10%, #FFF 10%, #FFF 90%, #00265f 90%);
+    padding: 70px 70px 50px;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
-}
-
-button {
+  }
+  
+  button {
     background: inherit;
     color: inherit;
     border: 0;
-}
-
-select {
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  select {
     appearance: none;
-}
-
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
+  }
+  
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
-}
-
-input[type="number"] {
+  }
+  
+  input[type="number"] {
     appearance: textfield;
-}
-
-.texto-medio-azul {
+  }
+  
+  .texto-medio-azul {
     color: var(--Light-Blue, #1875E8);
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-style: normal;
     font-weight: 600;
     line-height: 110%;
-}
-
-.conteudo-principal {
+    text-align: center;
+  }
+  
+  .conteudo-principal {
     filter: drop-shadow(0px 0px 70px rgba(2, 189, 255, 0.40));
-    min-height: 100%;
-    padding: 5rem 6.5rem;
-    display: grid;
-    grid-template-columns: 1.375fr 1fr;
-    column-gap: 5rem;
-    background: white ;
-    background-size: auto 40%;
+    width: calc(100%);
+    min-height: calc(100%);
+    padding: 40px 0px;
+    background: rgb(255, 255, 255);
+    margin: 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     position: relative;
-    background-position: left bottom -40px;
-}
-
-.grafismo-azul {
+  }
+  
+  .grafismo-azul {
     position: absolute;
     width: 31.9375rem;
     height: 2.0625rem;
     background-image: url('./assets/grafismo-azul.svg');
     top: -1rem;
-}
-
-.titulo {
+  }
+  
+  .titulo {
     font-family: 'Chakra Petch', sans-serif;
-    font-size: 5rem;
+    font-size: 3rem;
     font-style: normal;
     font-weight: 700;
     line-height: 100%;
     margin-bottom: 2.5rem;
-}
-
-.texto-azul {
+    text-align: center;
+  }
+  
+  .texto-azul {
     color: #1875E8;
-}
-
-.historico {
-    max-width: 800px;
-    margin: 0 auto;
+  }
+  
+  .historico {
+    width: 70%; /* Define a largura como 70% da largura da página */
+    max-width: 800px; /* Define a largura máxima */
+    height: 50vh; /* Define a altura como 50% da altura da página */
+    margin: 0 auto; /* Centraliza horizontalmente */
     padding: 20px;
     border: 1px solid #ccc;
     background-color: #f9f9f9;
     overflow-y: auto;
-    max-height: 400px;
 }
 
-.botao-limpar-historico {
+
+  
+  .botao-limpar-historico {
     border-radius: 1rem;
-    background: var(--Void, #01080E);
+    background: var(--Void, #003e74);
     box-shadow: 0px 0px 20px 0px rgba(1, 8, 14, 0.50);
     color: var(--Branco, #FFF);
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 700;
     line-height: normal;
-    margin-top: 1rem; /* Adicione margem superior para separar do histórico */
+    margin-top: 1rem;
     padding: 1rem 1.5rem;
     cursor: pointer;
-}
+  }
+  .botao-voltar{
+    border-radius: 1rem;
+    background: var(--Void, #1875E8);
+    box-shadow: 0px 0px 20px 0px rgba(1, 8, 14, 0.50);
+    color: var(--Branco, #FFF);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 1rem;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .conteudo-principal {
+      padding: 40px 20px;
+    }
+    
+    .titulo{
+        font-size: 2rem;
+    }
+
+    .grafismo-azul {
+      width: 15.96875rem;
+    }
+
+    body{
+        padding: 70px 20px 50px;
+    
+      }
+  }
+  
+  @media screen and (max-width: 560px) {
+    .grafismo-azul {
+      width: 7.984375rem;
+    }
+  }

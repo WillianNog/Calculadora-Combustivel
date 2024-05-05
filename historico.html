@@ -4,16 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Histórico de Gastos com Combustível</title>
-  <!-- Inclua o arquivo CSS de estilos -->
   <link rel="stylesheet" href="historico.css">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;600;700&display=swap"
+    rel="stylesheet">
 </head>
 <body>
-    <div class="conteudo-principal">
-        <div class="titulo">Histórico de Gastos com Combustível</div>
-        <div id="historico" class="historico"></div>
-    <button class="botao-form botao-voltar botao-limpar-historico " onclick="voltarParaGastos()">Voltar para Gastos de Combustível</button>
-        <!-- Botão para limpar o histórico -->
-    <button class="botao-limpar-historico  " onclick="limparHistorico()">Limpar Histórico</button>
+  <div class="conteudo-principal">
+    <div class="titulo">Histórico de Gastos com Combustível</div>
+    <div id="historico" class="historico"></div>
+    <div class="botoes-container">
+      <button class="botao-form botao-voltar" onclick="voltarParaGastos()">Voltar para Gastos de Combustível</button>
+      <button class="botao-limpar-historico" onclick="limparHistorico()">Limpar Histórico</button>
+    </div>
   </div>
   <script src="historico.js"></script>
 </body>
