@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    height: auto;
+    background: linear-gradient(to bottom, #01080E 10%, #FFF 10%, #FFF 90%, #01080E 90%);
+    padding: 7vh 8vw 5vh;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+button {
+    background: inherit;
+    color: inherit;
+    border: 0;
+}
+
+select {
+    appearance: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    appearance: textfield;
+}
+
+.texto-medio-azul {
+    color: var(--Light-Blue, #1875E8);
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+}
+
+.conteudo-principal {
+    filter: drop-shadow(0px 0px 70px rgba(2, 189, 255, 0.40));
+    min-height: 100%;
+    padding: 5rem 6.5rem;
+    display: grid;
+    grid-template-columns: 1.375fr 1fr;
+    column-gap: 5rem;
+    background: white ;
+    background-size: auto 40%;
+    position: relative;
+    background-position: left bottom -40px;
+}
+
+.grafismo-azul {
+    position: absolute;
+    width: 31.9375rem;
+    height: 2.0625rem;
+    background-image: url('./assets/grafismo-azul.svg');
+    top: -1rem;
+}
+
+.titulo {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    margin-bottom: 2.5rem;
+}
+
+.texto-azul {
+    color: #1875E8;
+}
+
+.historico {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+.botao-limpar-historico {
+    border-radius: 1rem;
+    background: var(--Void, #01080E);
+    box-shadow: 0px 0px 20px 0px rgba(1, 8, 14, 0.50);
+    color: var(--Branco, #FFF);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 1rem; /* Adicione margem superior para separar do histórico */
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+}
