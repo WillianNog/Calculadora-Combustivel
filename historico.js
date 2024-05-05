@@ -9,7 +9,8 @@ function carregarHistorico() {
     // Itera sobre os dados do histórico e cria elementos HTML para exibição
     historicoData.forEach(item => {
         const linha = document.createElement('p');
-        linha.textContent = `Distância: ${item.distancia} km, Consumo: ${item.consumo} km/L, Preço: R$ ${item.preco}, Total: R$ ${item.totalGasto.toFixed(2)}`;
+        // Monta a linha com as informações do histórico, colocando as palavras em negrito
+        linha.innerHTML = `<strong>Distância:</strong> ${item.distancia} km | <strong>Consumo:</strong> ${item.consumo} km/L | <strong>Preço:</strong> R$ ${item.preco} | <strong>Total:</strong> R$ ${item.totalGasto.toFixed(2)}`;
         historicoElement.appendChild(linha);
         
         // Adiciona uma quebra de linha entre cada mensagem do histórico

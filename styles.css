@@ -1,9 +1,11 @@
+/* Reset de estilos */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Estilos gerais */
 body {
   min-height: 100vh;
   height: auto;
@@ -23,23 +25,18 @@ select {
   appearance: none;
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input[type="number"] {
-  appearance: textfield;
-}
-
+/* Estilos específicos */
 .texto-medio-azul {
   color: var(--Light-Blue, #1875E8);
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 110%;
   text-align: center;
+}
+
+#resultado {
+  padding-top: 20px;
 }
 
 .conteudo-principal {
@@ -81,6 +78,8 @@ input[type="number"] {
 
 .texto-azul {
   color: #1875E8;
+  font-size: large;
+  font-weight: normal;
 }
 
 .formulario {
@@ -128,7 +127,6 @@ input[type="number"] {
   font-style: italic;
   font-weight: 400;
   line-height: 110%;
-  background: url('./assets/arrow-down.svg') no-repeat right 1rem top 50%;
 }
 
 .dropdown {
@@ -194,7 +192,7 @@ input[type="number"] {
   line-height: normal;
 }
 
-.botao-conexao{
+.botao-conexao {
   background: var(--Light-Blue, #a8a8a8);
   box-shadow: 0px 0px 20px 0px rgba(61, 61, 61, 0.5);
   color: var(--Branco, #000000);
@@ -279,12 +277,13 @@ input[type="number"] {
   .conteudo-principal {
     padding: 40px 20px;
   }
-  .titulo{
+
+  .titulo {
     font-size: 2rem;
   }
-  body{
-    padding: 70px 20px 50px;
 
+  body {
+    padding: 70px 20px 50px;
   }
 }
 
@@ -298,4 +297,40 @@ input[type="number"] {
   .grafismo-azul {
     width: 7.984375rem;
   }
+}
+
+/* Remove as setas padrão dos campos de entrada */
+.input-number::-webkit-inner-spin-button,
+.input-number::-webkit-outer-spin-button {
+  -webkit-appearance: inner-spin-button;
+  appearance: inner-spin-button;
+}
+
+/* Define a imagem para as setas de incremento e decremento */
+.input-number {
+  background-image: url('seta-cima.png'); /* Imagem para a seta para cima */
+  background-position: right center; /* Posição da imagem */
+  background-repeat: no-repeat; /* Não repetir a imagem */
+  padding: 0.75rem 1rem; /* Ajuste o padding vertical e horizontal */
+  padding-left: 2.5rem; /* Ajuste o padding esquerdo */
+  color: #1875E8; /* Cor do texto */
+  font-size: 1rem; /* Tamanho do texto */
+  font-weight: bold; /* Negrito para melhorar a visibilidade */
+  text-align: center; /* Centraliza o texto */
+  box-sizing: border-box; /* Garante que o padding não afete a largura total */
+  -webkit-appearance: textfield;
+  appearance: textfield;
+  margin: 0; /* Remova o espaçamento externo */
+}
+
+.input-number::-webkit-inner-spin-button {
+  background-image: url('seta-baixo.png'); /* Imagem para a seta para baixo */
+  background-position: right center; /* Posição da imagem */
+  background-repeat: no-repeat; /* Não repetir a imagem */
+  width: 30px; /* Largura da imagem */
+  height: 30px; /* Altura da imagem */
+  margin-top: 10px; /* Ajuste fino de posição */
+  color: transparent; /* Tornar o texto transparente */
+  font-size: 1rem; /* Tamanho do texto */
+  font-weight: bold; /* Negrito para melhorar a visibilidade */
 }

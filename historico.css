@@ -1,145 +1,157 @@
+/* Reset CSS */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    min-height: 100vh;
-    height: auto;
-    background: linear-gradient(to bottom, #00265f 10%, #FFF 10%, #FFF 90%, #00265f 90%);
-    padding: 70px 70px 50px;
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-  }
-  
-  button {
-    background: inherit;
-    color: inherit;
-    border: 0;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  
-  select {
-    appearance: none;
-  }
-  
-  input[type="number"]::-webkit-outer-spin-button,
-  input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-  
-  input[type="number"] {
-    appearance: textfield;
-  }
-  
-  .texto-medio-azul {
-    color: var(--Light-Blue, #1875E8);
-    font-size: 1.25rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 110%;
-    text-align: center;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  min-height: 100vh;
+  height: auto;
+  background: linear-gradient(to bottom, #00265f 10%, #FFF 10%, #FFF 90%, #00265f 90%);
+  padding: 70px 70px 50px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+/* Button Styles */
+button {
+  background: inherit;
+  color: inherit;
+  border: 0;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Select Styles */
+select {
+  appearance: none;
+}
+
+/* Number Input Styles */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  appearance: textfield;
+}
+
+/* Blue Text Styles */
+.texto-medio-azul {
+  color: var(--Light-Blue, #1875E8);
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  text-align: center;
+}
+
+/* Main Content Container Styles */
+.conteudo-principal {
+  filter: drop-shadow(0px 0px 70px rgba(2, 189, 255, 0.40));
+  width: calc(100%);
+  min-height: calc(100%);
+  padding: 40px 0px;
+  background: rgb(255, 255, 255);
+  margin: 0px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+/* Blue Graphic Styles */
+.grafismo-azul {
+  position: absolute;
+  width: 31.9375rem;
+  height: 2.0625rem;
+  background-image: url('./assets/grafismo-azul.svg');
+  top: -1rem;
+}
+
+/* Title Styles */
+.titulo {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+/* Blue Text Color */
+.texto-azul {
+  color: #1875E8;
+}
+
+/* History Container Styles */
+.historico {
+  width: 70%; /* 70% width of the page */
+  max-width: 800px; /* Maximum width */
+  height: 50vh; /* 50% height of the page */
+  margin: 0 auto; /* Horizontal centering */
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  overflow-y: auto;
+}
+
+/* Clear History Button Styles */
+.botao-limpar-historico {
+  border-radius: 1rem;
+  background: var(--Void, #003e74);
+  box-shadow: 0px 0px 20px 0px rgba(1, 8, 14, 0.50);
+  color: var(--Branco, #FFF);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 1rem;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+}
+
+/* Back Button Styles */
+.botao-voltar {
+  border-radius: 1rem;
+  background: var(--Void, #1875E8);
+  box-shadow: 0px 0px 20px 0px rgba(1, 8, 14, 0.50);
+  color: var(--Branco, #FFF);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 1rem;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
   .conteudo-principal {
-    filter: drop-shadow(0px 0px 70px rgba(2, 189, 255, 0.40));
-    width: calc(100%);
-    min-height: calc(100%);
-    padding: 40px 0px;
-    background: rgb(255, 255, 255);
-    margin: 0px 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-  }
-  
-  .grafismo-azul {
-    position: absolute;
-    width: 31.9375rem;
-    height: 2.0625rem;
-    background-image: url('./assets/grafismo-azul.svg');
-    top: -1rem;
+      padding: 40px 20px;
   }
   
   .titulo {
-    font-family: 'Chakra Petch', sans-serif;
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 100%;
-    margin-bottom: 2.5rem;
-    text-align: center;
+      font-size: 2rem;
   }
-  
-  .texto-azul {
-    color: #1875E8;
+
+  .grafismo-azul {
+      width: 15.96875rem;
   }
-  
-  .historico {
-    width: 70%; /* Define a largura como 70% da largura da página */
-    max-width: 800px; /* Define a largura máxima */
-    height: 50vh; /* Define a altura como 50% da altura da página */
-    margin: 0 auto; /* Centraliza horizontalmente */
-    padding: 20px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
-    overflow-y: auto;
+
+  body {
+      padding: 70px 20px 50px;
+  }
 }
 
-
-  
-  .botao-limpar-historico {
-    border-radius: 1rem;
-    background: var(--Void, #003e74);
-    box-shadow: 0px 0px 20px 0px rgba(1, 8, 14, 0.50);
-    color: var(--Branco, #FFF);
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: normal;
-    margin-top: 1rem;
-    padding: 1rem 1.5rem;
-    cursor: pointer;
-  }
-  .botao-voltar{
-    border-radius: 1rem;
-    background: var(--Void, #1875E8);
-    box-shadow: 0px 0px 20px 0px rgba(1, 8, 14, 0.50);
-    color: var(--Branco, #FFF);
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: normal;
-    margin-top: 1rem;
-    padding: 1rem 1.5rem;
-    cursor: pointer;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .conteudo-principal {
-      padding: 40px 20px;
-    }
-    
-    .titulo{
-        font-size: 2rem;
-    }
-
-    .grafismo-azul {
-      width: 15.96875rem;
-    }
-
-    body{
-        padding: 70px 20px 50px;
-    
-      }
-  }
-  
-  @media screen and (max-width: 560px) {
-    .grafismo-azul {
+@media screen and (max-width: 560px) {
+  .grafismo-azul {
       width: 7.984375rem;
-    }
   }
+}

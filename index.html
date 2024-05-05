@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculadora de Gastos com Combustível</title>
-  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;600;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,34 +13,32 @@
     <div class="titulo">Calculadora de Gastos com Combustível</div>
     <div class="formulario">
       <div class="inputs-container">
-        <!-- campos de inputs -->
+        <!-- Campos de inputs -->
         <div class="campo-grupo">
           <label for="distancia" class="texto-azul">Distância percorrida (km):</label>
-          <input type="number" id="distancia" name="distancia" class="produto-input">
+          <input type="number" id="distancia" name="distancia" class="produto-input input-number">
         </div>
         <div class="campo-grupo">
           <label for="consumo" class="texto-azul">Consumo médio do veículo (km/L):</label>
-          <input type="number" id="consumo" name="consumo" class="produto-input">
+          <input type="number" id="consumo" name="consumo" class="produto-input input-number">
         </div>
         <div class="campo-grupo">
           <label for="preco" class="texto-azul">Preço do combustível por litro (R$):</label>
-          <input type="number" id="preco" name="preco" class="produto-input">
+          <input type="number" id="preco" name="preco" class="produto-input input-number">
         </div>
       </div>
-
       <div class="botoes-container">
-        <!-- campos de botoes -->
+        <!-- Campos de botões -->
         <button class="botao-form botao-adicionar" onclick="calcularGastos()">Calcular Gastos</button>
         <button class="botao-form botao-limpar" onclick="limparCampos()">Limpar Campos</button>
-        <p id="resultado" class="texto-medio-azul"></p>
         <!-- Botão de conexão para o histórico -->
         <button class="botao-form botao-conexao" onclick="irParaHistorico()">Ver Histórico</button>
       </div>
     </div>
-    <!-- Adicionando a classe carro-imagem para o elemento div -->
+    <p id="resultado" class="texto-medio-azul"></p>
+    <!-- Adicionando a classe carro-imagem para o elemento img -->
     <img src="./assets/carro.jpeg" alt="Imagem do carro" class="carro-imagem">
   </div>
-  
   <script src="script.js"></script>
 </body>
 </html>

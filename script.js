@@ -1,8 +1,25 @@
 function calcularGastos() {
     // Obtém os valores dos inputs
-    const distancia = parseFloat(document.getElementById("distancia").value);
-    const consumo = parseFloat(document.getElementById("consumo").value);
-    const preco = parseFloat(document.getElementById("preco").value);
+    const distanciaInput = document.getElementById("distancia").value;
+    const consumoInput = document.getElementById("consumo").value;
+    const precoInput = document.getElementById("preco").value;
+    
+    // Verifica se os campos estão preenchidos
+    if (distanciaInput === "" || consumoInput === "" || precoInput === "") {
+        alert("Por favor, preencha todos os campos.");
+        return; // Retorna para evitar cálculos com valores inválidos
+    }
+
+    // Converte os valores para números
+    const distancia = parseFloat(distanciaInput);
+    const consumo = parseFloat(consumoInput);
+    const preco = parseFloat(precoInput);
+
+    // Verifica se os valores são números válidos
+    if (isNaN(distancia) || isNaN(consumo) || isNaN(preco)) {
+        alert("Por favor, insira valores numéricos válidos.");
+        return; // Retorna para evitar cálculos com valores inválidos
+    }
     
     // Calcula o total gasto com combustível
     const totalGasto = (distancia / consumo) * preco;
@@ -10,18 +27,25 @@ function calcularGastos() {
     // Exibe o resultado na página HTML
     document.getElementById("resultado").innerHTML = "Total gasto com combustível: R$ " + totalGasto.toFixed(2);
     
-    // Cria um objeto com os dados
-    const dados = {
-        distancia: distancia,
-        consumo: consumo,
-        preco: preco,
-        totalGasto: totalGasto
-    };
+    // Chama a função para adicionar ao histórico após o resultado ser exibido
+    alertaHistorico(totalGasto);
+}
 
+function alertaHistorico(totalGasto) {
     // Adiciona os dados ao histórico
-    confirm("Adicionar Ao Historico ?") ? (alert("Adicionado"), adicionarAoHistorico(dados)) : alert("cancelado");
-    // adicionarAoHistorico(dados);
-    
+    if (confirm("Adicionar Ao Historico ? \n\nTotal gasto com combustível: R$ " + totalGasto.toFixed(2))) {
+        alert("Adicionado");
+        // Cria um objeto com os dados
+        const dados = {
+            distancia: parseFloat(document.getElementById("distancia").value),
+            consumo: parseFloat(document.getElementById("consumo").value),
+            preco: parseFloat(document.getElementById("preco").value),
+            totalGasto: totalGasto
+        };
+        adicionarAoHistorico(dados);
+    } else {
+        alert("Cancelado");
+    }
 }
 
 function adicionarAoHistorico(dados) {
